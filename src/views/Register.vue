@@ -1,32 +1,39 @@
 <template>
   <v-app>
-    <h1>Register</h1>
-    <v-form ref="regist_form">
-      <v-container>
-        <v-row class="flex-column" justify="center" align-content="center">
-          <TextInputBox
-            :label="idInputName"
-            :id="idofIdName"
-            :inputValue.sync="idInputValue"
-          />
-          <TextInputBox
-            :label="passwordInputName"
-            :id="passwordIdName"
-            :inputValue.sync="passwordInputValue"
-          />
-          <TextInputBox
-            :label="passwordConfirmInputName"
-            :id="passwordConfirmIdName"
-            :inputValue.sync="passwordConfirmInputValue"
-          />
-          <SubmitBtn
-            :name="submitBtnName"
-            :isDisabled="isDisabled"
-            @onSubmit="regist"
-          />
-        </v-row>
-      </v-container>
-    </v-form>
+    <v-row class="flex-column" justify="center" align-content="center">
+      <v-col cols="12" sm="6" md="3">
+        <v-card elevation="3">
+          <v-container>
+            <h1>Register</h1>
+            <TextInputBox
+              :label="idInputName"
+              :id="idofIdName"
+              :inputValue.sync="idInputValue"
+            />
+            <TextInputBox
+              :label="passwordInputName"
+              :id="passwordIdName"
+              :inputValue.sync="passwordInputValue"
+            />
+            <TextInputBox
+              :label="passwordConfirmInputName"
+              :id="passwordConfirmIdName"
+              :inputValue.sync="passwordConfirmInputValue"
+            />
+            <SubmitBtn
+              :name="submitBtnName"
+              :isDisabled="isDisabled"
+              @onSubmit="regist"
+            />
+            <v-card-text>
+              アカウントをお持ちの方は<router-link to="/login"
+                >こちら</router-link
+              >
+            </v-card-text>
+          </v-container>
+        </v-card>
+      </v-col>
+    </v-row>
   </v-app>
 </template>
 
