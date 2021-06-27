@@ -1,26 +1,32 @@
 <template>
   <v-app>
-    <h1>Login</h1>
-    <v-container>
-      <v-row class="flex-column" justify="center" align-content="center">
-        <TextInputBox
-          :label="idInputName"
-          :id="idofIdName"
-          :inputValue.sync="idInputValue"
-        />
-        <TextInputBox
-          :label="passwordInputName"
-          :id="passwordIdName"
-          :inputValue.sync="passwordInputValue"
-        />
-        <SubmitBtn :name="submitBtnName" @onSubmit="login" />
-      </v-row>
-    </v-container>
-
-    {{ isLogin }}
-    <p class="error__msg" v-if="isFailedLogin">
-      IDまたはpasswordに誤りがあります。
-    </p>
+    <v-row class="flex-column" justify="center" align-content="center">
+      <v-col cols="12" sm="6" md="3">
+        <v-card>
+          <h1>Login</h1>
+          <v-container>
+            <TextInputBox
+              :label="idInputName"
+              :id="idofIdName"
+              :inputValue.sync="idInputValue"
+            />
+            <TextInputBox
+              :label="passwordInputName"
+              :id="passwordIdName"
+              :inputValue.sync="passwordInputValue"
+            />
+            <SubmitBtn :name="submitBtnName" @onSubmit="login" />
+            <v-card-text>
+              アカウント登録は<router-link to="/register">こちら</router-link
+              >から
+            </v-card-text>
+            <p class="error__msg" v-if="isFailedLogin">
+              IDまたはpasswordに誤りがあります。
+            </p>
+          </v-container>
+        </v-card>
+      </v-col>
+    </v-row>
   </v-app>
 </template>
 
