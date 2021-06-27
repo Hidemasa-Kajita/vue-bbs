@@ -1,6 +1,6 @@
 <template>
-  <v-app>
-    <v-row class="flex-column" justify="center" align-content="center">
+  <v-app class="blue-grey darken-3">
+    <v-row class="flex-column mt-10" align-content="center">
       <v-col cols="12" sm="6" md="3">
         <v-card elevation="3">
           <v-container>
@@ -83,7 +83,7 @@ export default {
       // console.log(this.$refs.regist_form.validate())
 
       this.$store.dispatch("regist", {
-        id: this.idInputValue,
+        email: this.idInputValue,
         password: this.passwordInputValue,
       });
 

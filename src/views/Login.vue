@@ -1,6 +1,6 @@
 <template>
-  <v-app>
-    <v-row class="flex-column" justify="center" align-content="center">
+  <v-app class="blue-grey darken-3">
+    <v-row class="flex-column mt-10" align-content="center">
       <v-col cols="12" sm="6" md="3">
         <v-card>
           <h1>Login</h1>
@@ -67,12 +67,15 @@ export default {
     login() {
       // TODO: formにバリデーションをして初期値ではログインできないようにする
       const user = this.$store.getters.user;
+      console.log(user);
       if (
-        user.id === this.idInputValue &&
+        user.email === this.idInputValue &&
         user.password === this.passwordInputValue
       ) {
         this.$store.dispatch("login", { msg: "success", isSuccess: true });
         this.counter = 0;
+
+        this.$router.push({ name: "Articles" });
         return;
       }
 
