@@ -38,8 +38,8 @@
 </template>
 
 <script>
-import TextInputBox from "../components/atoms/TextInputBox.vue";
-import SubmitBtn from "../components/atoms/SubmitBtn.vue";
+import TextInputBox from "../components/TextInputBox.vue";
+import SubmitBtn from "../components/SubmitBtn.vue";
 
 export default {
   name: "Register",

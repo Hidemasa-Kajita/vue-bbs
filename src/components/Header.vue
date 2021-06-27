@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import Icon from "./atoms/Icon.vue";
+import Icon from "./Icon.vue";
 
 export default {
   name: "Header",
