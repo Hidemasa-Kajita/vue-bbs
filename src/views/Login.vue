@@ -59,6 +59,7 @@ export default {
   },
   methods: {
     login() {
+      // TODO: formにバリデーションをして初期値ではログインできないようにする
       const user = this.$store.getters.user;
       if (
         user.id === this.idInputValue &&

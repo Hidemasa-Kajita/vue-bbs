@@ -5,4 +5,8 @@ export const actions = {
     console.log(payload.msg);
     commit("login", payload.isSuccess);
   },
+  regist({ commit }, payload) {
+    console.log(payload);
+    commit("regist", payload);
+  },
 };

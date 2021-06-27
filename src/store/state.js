@@ -3,7 +3,7 @@
 export const state = {
   isLogin: false,
   user: {
-    id: "kajita",
-    password: "p@ssw0rd",
+    id: "",
+    password: "",
   },
 };
