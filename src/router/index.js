@@ -6,7 +6,7 @@ import Register from "../views/Register.vue";
 import Articles from "../views/Articles.vue";
 import Article from "../views/Article.vue";
 import Error404 from "../views/Error404.vue";
-// import store from "../store";
+import store from "../store";
 
 Vue.use(VueRouter);
 
@@ -58,19 +58,15 @@ const router = new VueRouter({
   routes,
 });
 
-/**
- * ASK:
- * 開発中は邪魔なので消す
- */
-// router.beforeEach((to, from, next) => {
-//   if (
-//     to.matched.some((record) => record.meta.requiresAuth) &&
-//     !store.getters.isLogin
-//   ) {
-//     next({ path: "/login" });
-//   } else {
-//     next();
-//   }
-// });
+router.beforeEach((to, from, next) => {
+  if (
+    to.matched.some((record) => record.meta.requiresAuth) &&
+    !store.getters.isLogin
+  ) {
+    next({ path: "/login" });
+  } else {
+    next();
+  }
+});
 
 export default router;

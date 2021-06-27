@@ -4,9 +4,9 @@ export const state = {
   isLogin: false,
   user: {
     id: 1,
-    email: "d",
-    password: "d",
-    name: "kajita",
+    email: "hoge@example.com",
+    password: "p@ssw0rd",
+    name: "hoge",
   },
   article: {},
   articles: [
@@ -19,7 +19,7 @@ export const state = {
       favorite_count: 1,
       is_favorate: true,
       user: {
-        name: "kajita",
+        name: "hoge",
       },
       comments: [
         {
@@ -36,9 +36,9 @@ export const state = {
       id: 2,
       title: "article2",
       contents: "content2",
-      comment_count: 2,
-      user_id: 1,
-      favorite_count: 1,
+      comment_count: 0,
+      user_id: 2,
+      favorite_count: 0,
       is_favorate: false,
       user: {
         name: "yamada",
@@ -49,9 +49,9 @@ export const state = {
       id: 3,
       title: "article3",
       contents: "content3",
-      comment_count: 3,
-      user_id: 1,
-      favorite_count: 1,
+      comment_count: 0,
+      user_id: 3,
+      favorite_count: 0,
       is_favorate: false,
       user: {
         name: "sato",
@@ -62,9 +62,9 @@ export const state = {
       id: 4,
       title: "article4",
       contents: "content4",
-      comment_count: 4,
-      user_id: 2,
-      favorite_count: 1,
+      comment_count: 0,
+      user_id: 4,
+      favorite_count: 0,
       is_favorate: false,
       user: {
         name: "muto",
@@ -75,9 +75,9 @@ export const state = {
       id: 5,
       title: "article5",
       contents: "content5",
-      comment_count: 5,
-      user_id: 2,
-      favorite_count: 4,
+      comment_count: 0,
+      user_id: 5,
+      favorite_count: 0,
       is_favorate: false,
       user: {
         name: "yamashita",
