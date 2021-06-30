@@ -7,4 +7,10 @@ export const getters = {
   isLogin(state) {
     return state.isLogin;
   },
+  articles(state) {
+    return state.articles;
+  },
+  article(state) {
+    return state.article;
+  },
 };
